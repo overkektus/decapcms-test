@@ -11,31 +11,40 @@ collections:
         name: 'home'
         file: 'content/home.md'
         fields:
+          - { label: 'Id', name: 'id', widget: 'hidden', default: '{{uuid}}' }
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Short about', name: 'short_about', widget: 'text' }
           - { label: 'About title', name: 'about_title', widget: 'string' }
           - { label: 'About body', name: 'about_body', widget: 'text' }
-          - label: 'Socials'
-            name: 'socials'
-            widget: list
-            fields:
-              - { label: 'Name', name: 'name', widget: 'string' }
-              - { label: 'Link', name: 'link', widget: 'string' }
-              - { label: 'Icon', name: 'icon', widget: 'image' }
-          - label: 'Portfolio'
-            name: 'portfolio'
+          - label: 'Projects'
+            name: 'projects'
             widget: list
             fields:
               - { label: 'Title', name: 'title', widget: 'string' }
               - { label: 'Description', name: 'description', widget: 'text' }
+              - label: Photos
+                name: photos
+                widget: list
+                fields:
+                  - {
+                      label: Photo,
+                      name: photo,
+                      widget: image,
+                      choose_url: false,
+                    }
+                  - { label: Alt, name: alt, widget: string }
               - { label: 'Github', name: 'github', widget: 'string' }
-              - { label: 'Live', name: 'live', widget: 'string' }
+              - { label: 'Demo', name: 'demo', widget: 'string' }
               - {
                   label: 'Technologies',
                   name: 'technologies',
                   widget: 'list',
                   fields: [{ label: 'Name', name: 'name', widget: 'string' }],
                 }
-              - { label: 'Image', name: 'image', widget: 'image' }
-          - { label: 'Location', name: 'loacation', widget: 'string' }
+          - {
+              label: 'Location title',
+              name: 'location_title',
+              widget: 'string',
+            }
+          - { label: 'Location link', name: 'location_link', widget: 'string' }
           - { label: 'Email', name: 'email', widget: 'string' }
