@@ -16,6 +16,8 @@ collections:
           - { label: 'Short about', name: 'short_about', widget: 'text' }
           - { label: 'About title', name: 'about_title', widget: 'string' }
           - { label: 'About body', name: 'about_body', widget: 'text' }
+          - { label: 'Github', name: 'github', widget: 'text' }
+          - { label: 'Linkedin', name: 'linkedin', widget: 'text' }
           - label: 'Projects'
             name: 'projects'
             widget: list
