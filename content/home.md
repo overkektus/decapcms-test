@@ -1,6 +1,23 @@
 ---
-title: Awesome kitties
+short_about: short about
+about_title: about title
+socials:
+  - name: GIthub
+    link: https://github.com/overkektus
+    icon: img/github.svg
+portfolio:
+  - title: title
+    description: description
+    github: GitHub
+    live: live
+    technologies:
+      - name: Tech
+    image: img/about.png
 date: 2019-03-17T19:31:20.591Z
+title: Title
+about_body: about body
+loacation: location
+email: email
 cats:
   - description: Maru is a Scottish Fold from Japan, and he loves boxes.
     name: Maru
