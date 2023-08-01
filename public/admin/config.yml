@@ -1,22 +1,41 @@
 backend:
-  name: git-gateway
+  name: test-repo
   branch: main
 media_folder: public/img
 public_folder: img
 collections:
-  - name: "pages"
-    label: "Pages"
+  - name: 'pages'
+    label: 'Pages'
     files:
-    - label: "Home"
-      name: "home"
-      file: "content/home.md"
-      fields:
-        - { label: "Title", name: "title", widget: "string"}
-        - { label: "Publish Date", name: "date", widget: "datetime" }
-        - { label: "Body", name: "body", widget: "markdown"}
-        - label: 'Cats'
-          name: "cats"
-          widget: list
-          fields:
-            - { label: "Name", name: "name", widget: "string"}
-            - { label: "Description", name: "description", widget: "text"}
+      - label: 'Home'
+        name: 'home'
+        file: 'content/home.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Short about', name: 'short_about', widget: 'text' }
+          - { label: 'About title', name: 'about_title', widget: 'string' }
+          - { label: 'About body', name: 'about_body', widget: 'text' }
+          - label: 'Socials'
+            name: 'socials'
+            widget: list
+            fields:
+              - { label: 'Name', name: 'name', widget: 'string' }
+              - { label: 'Link', name: 'link', widget: 'string' }
+              - { label: 'Icon', name: 'icon', widget: 'image' }
+          - label: 'Portfolio'
+            name: 'portfolio'
+            widget: list
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Description', name: 'description', widget: 'text' }
+              - { label: 'Github', name: 'github', widget: 'string' }
+              - { label: 'Live', name: 'live', widget: 'string' }
+              - {
+                  label: 'Technologies',
+                  name: 'technologies',
+                  widget: 'list',
+                  fields: [{ label: 'Name', name: 'name', widget: 'string' }],
+                }
+              - { label: 'Image', name: 'image', widget: 'image' }
+          - { label: 'Location', name: 'loacation', widget: 'string' }
+          - { label: 'Email', name: 'email', widget: 'string' }
